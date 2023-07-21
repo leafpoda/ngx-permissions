@@ -1,14 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-    ActivatedRouteSnapshot,
-    CanActivate,
-    CanActivateChild,
-    CanLoad, CanMatch,
-    NavigationExtras,
-    Route,
-    Router,
-    RouterStateSnapshot
-} from '@angular/router';
+import { ActivatedRouteSnapshot, NavigationExtras, Route, Router, RouterStateSnapshot } from '@angular/router';
 
 import { forkJoin, from, Observable, of } from 'rxjs';
 import { first, mergeMap, tap } from 'rxjs/operators';
@@ -35,7 +26,7 @@ export interface NgxPermissionsData {
 }
 
 @Injectable()
-export class NgxPermissionsGuard implements CanActivate, CanLoad, CanActivateChild, CanMatch {
+export class NgxPermissionsGuard  {
 
     constructor(private permissionsService: NgxPermissionsService, private rolesService: NgxRolesService, private router: Router) {
     }
